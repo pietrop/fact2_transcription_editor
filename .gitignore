@@ -1,0 +1,45 @@
+# .gitignore, files to ignore when pushing to github 
+
+#mock_api_dev_server
+mock_api_dev_server/vid-2017-10-03.mp4
+
+
+# ignore dist folder to avoid conflicts when commiting to origin 
+dist/
+
+#ignore all video files
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
+
+#ignore audio file
+*.wav
+*.mp3
+
+#ingore subtitles files
+*.srt
+*.sbv
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+.idea
+
+

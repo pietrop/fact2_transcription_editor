@@ -1,0 +1,285 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css');
+
+/*Bootstrap basic look */
+/*@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');*/
+
+/*Bootswatch options*/
+/*@import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/paper/bootstrap.min.css');*/
+/*@import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css');*/
+/*@import url('https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/united/bootstrap.min.css');*/
+
+html, body {
+    height: 100%;
+}
+
+
+.navbar {
+    border-radius: 0px!important;
+    /*margin-bottom: 10px!important;*/
+}
+
+div#main {
+    padding-top: 23px!important;
+}
+
+
+#backgroundDiv {
+    height: 100%;
+}
+
+input {
+    text-align: center!important;
+}
+
+
+.textBox{
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc!important;
+  padding: 50px!important;
+  color: black;
+}
+
+.videoPreview {
+    /*background-color: black;*/
+    width: 100%;
+    height: 35hv;
+}
+
+/**/
+body{
+     background: #f1f1f1;
+}
+
+
+.breadcrumb{
+  background: #f1f1f1;
+}
+
+.breadcrumb li.active {
+    color: grey!important;
+}
+
+/**/
+
+.is-hidden{
+	visibility: hidden;
+}
+
+
+.list-group.transcriptionsListEl {
+	/*TODO: change px to hv, nto working at the moment for some reason*/
+    height: 800px;
+    overflow: auto;
+}
+
+
+/**/
+.changePosition{
+    text-align: center; 
+} 
+.changePositionLabel{
+    text-align: center; 
+} 
+
+
+.glyphicon-repeat {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
+
+/*Progress bar */
+.progressBar{
+    position: relative;
+    width: 100%;
+    margin-left: 0px;
+    /*margin-top: 0px;*/
+    /*margin-top:10px;*/
+    /*height: height:10px;*/
+    backgroud-color: #4d4d4d;
+
+}
+.timeBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #d3d3d3;
+}
+
+
+/*responsive navbar progress bar*/
+/*XS*/
+@media (max-width: 768px) { 
+    /*... */
+/*    body {
+        background-color: black;
+    }*/
+
+     .resizeProgressBar{
+       width: 350px;  !important;
+       margin-left: 10px;
+    }
+
+}
+
+/*SM*/
+@media (min-width: 768px) and (max-width: 992px) { 
+    /*... */
+/*    body {
+        background-color: red;
+    }*/
+
+     .resizeProgressBar{
+       width: 727px;  !important;
+    }
+
+}
+
+/*MD*/
+@media (min-width: 992px) and (max-width: 1200px) { 
+    /*... */
+/*      body {
+        background-color: lightgreen;
+    }
+*/
+     .resizeProgressBar{
+       width: 300px;  !important;
+    }
+
+}
+
+/*LG*/
+@media (min-width: 1200px) and (max-width: 1920px) { 
+    /*... */
+    /* body {
+        background-color: lightyellow;
+    }*/
+
+     .resizeProgressBar{
+       width: 400px;  !important;
+    }
+
+}
+
+/*LG*/
+@media (min-width: 1920px) { 
+    /*... */
+/*     body {
+        background-color: lightyellow;
+    }
+*/
+     .resizeProgressBar{
+       width: 753px;  !important;
+    }
+
+}
+/*end responsive navbar progress bar*/
+
+.durationInfo{
+    color: white;
+    /*position: absolute;*/
+    padding-top: 3px!important;
+}
+
+
+.progressTime {
+    margin-top: 12px;
+}
+
+/*to add a plank screen when working with audio */
+.blankPreview {
+    background-color: black;
+}
+
+
+.progressTime{
+    color:white;
+}
+
+.playerControls {
+    cursor: pointer;
+}
+
+
+.afterPlayHead {
+    /*color:black;*/
+    /*text-decoration: bold;*/
+     font-weight: normal;
+     text-decoration: none;
+}
+
+
+.beforePlayHead {
+    text-decoration: underline;
+     
+    /* font-weight: bold; */
+}
+
+.words{
+    cursor: pointer;
+/*    font-family: "Glyphicons Halflings";
+    content: "\e080";*/
+}
+
+/*Confidence score 1:; >95% = no color */
+.confidenceScore1{
+    /*color:none;*/
+}
+/*Confidence score 2:80-95% = light yellow */
+.confidenceScore2{
+    background-color:lightyellow;
+}
+/*Confidence score 2:70-80% = yellow */
+.confidenceScore3{
+    background-color:yellow;
+}
+/*Confidence score 2:< 60% = red */
+.confidenceScore4{
+    background-color:red;
+    color: white;
+}
+
+
+.wordnoTimeCode{
+    color: grey;
+    cursor: text;
+}
+
+
+.speakerLabel{
+    color:grey;
+}
+
+.descriptionLabel{
+    color:lightgrey;
+}
+
+
+
+.currentWord {
+    /*background-color: lightblue;*/
+     text-decoration: underline;
+}
+
+.noclick{
+    cursor:no-drop!important;    
+}
+
+@media all and (min-width:0px) and (max-width: 480px) {
+  /* put your css styles in here */
+
+  /* when on mobile, to display controls inline  */
+    .menu-half {
+        display: inline-block !important;
+        margin-left: 10px;
+    }
+}
