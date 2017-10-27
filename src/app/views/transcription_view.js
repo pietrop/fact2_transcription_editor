@@ -144,14 +144,14 @@ module.exports = Backbone.View.extend({
     // https://gist.github.com/iliyat/dbe3d4c435d26e87b164
     // explained here
     // https://stackoverflow.com/questions/15566597/mouseup-and-doubleclick-both-attached-to-seperate-event-handling-functions-using
-    'touchstart .words': _.debounce(function(e) {
+    'touchstart .textBox': _.debounce(function(e) {
             if (this.doucleckicked) {
                 this.doucleckicked = false;
             } else {
                 this.onmouseup.call(this, e);
             }
         }, 300),
-        'dblclick .words': function(e) {
+        'dblclick .textBox': function(e) {
             this.doucleckicked = true;
             this.ondblclick.call(this, e);
         }
@@ -163,6 +163,7 @@ module.exports = Backbone.View.extend({
   },
 
   ondblclick: function(e) {
+    console.log('ondblclick ', e);
       // console.log('dblclick in a word ');
       //start playing from that point onwards 
       this.playFromWord(e);
