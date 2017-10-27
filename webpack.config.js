@@ -14,7 +14,7 @@ const config = {
    devServer: {    
       contentBase: path.join(__dirname, "dist"),
       compress: true,
-      // host: "127.0.0.1",
+      // host: "127.0.0.1", with `0.0.0.0` you can access it on your network, eg if you want to test on mobile
       host :"0.0.0.0",
       port: 9000,
       bonjour: true
