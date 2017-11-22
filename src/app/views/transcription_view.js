@@ -78,7 +78,7 @@ module.exports = Backbone.View.extend({
     // },500);
     // 
     
-
+    this.confidenceScoreOn = false;
  
 
   },
@@ -140,6 +140,8 @@ module.exports = Backbone.View.extend({
     "click .restoreLastSaved": "restoreLastSavedLocally",
 
     "click #showHideMediaPreviewCheckBox" :"hideShowMediaPreview",
+
+    "click #showHideConfidenceScoresCheckBox": "showHideConfidenceScores",
 
     "click .intermediateSaveBtn": "intermediateSaveLocally",
 
@@ -323,11 +325,14 @@ module.exports = Backbone.View.extend({
         // console.log(w);
         //covering edge case where words timings are not defined.
         if(w.dataset.startTime){
-          if(w.dataset.startTime > currentTime){
+          if( (w.dataset.startTime > currentTime) && (currentTime < w.dataset.endTime ) ){
+            console.log("1111111111");
             w.classList.add('afterPlayHead');
             w.classList.remove('beforePlayHead');
 
           }else{
+             console.log("22222222");
+             console.log(currentTime, w.dataset, w);
             w.classList.add('beforePlayHead');
             w.classList.remove('afterPlayHead');
           }
@@ -774,6 +779,56 @@ pasteHtmlAtCaret: function (html) {
       var style = window.getComputedStyle(el);
       return (style.visibility === 'hidden');
     }
+  },
+
+  showHideConfidenceScores: function(){
+    //TODO: this could be refactored to be cleaner and less code repetition.
+    console.log("show hide confidence scores");
+
+    if(!this.confidenceScoreOn){
+
+      var nodes2 = document.querySelectorAll('.confidenceScore2');
+      for (var i = 0; i < nodes2.length; i++) {
+              nodes2[i].style.backgroundColor = 'white';
+              nodes2[i].style.color = 'black';
+      }
+
+       var nodes3 = document.querySelectorAll('.confidenceScore3');
+      for (var i = 0; i < nodes3.length; i++) {
+              nodes3[i].style.backgroundColor = 'white';
+              nodes3[i].style.color = 'black';
+      }
+
+      var nodes4 = document.querySelectorAll('.confidenceScore4');
+      for (var i = 0; i < nodes4.length; i++) {
+              nodes4[i].style.backgroundColor = 'white';
+              nodes4[i].style.color = 'black';
+      }
+
+      this.confidenceScoreOn = true;
+    }else{
+
+      var nodes2 = document.querySelectorAll('.confidenceScore2');
+      for (var i = 0; i < nodes2.length; i++) {
+              nodes2[i].style.backgroundColor = 'lightyellow';
+              nodes2[i].style.color = 'black';
+      }
+
+       var nodes3 = document.querySelectorAll('.confidenceScore3');
+      for (var i = 0; i < nodes3.length; i++) {
+              nodes3[i].style.backgroundColor = 'yellow';
+              nodes3[i].style.color = 'black';
+      }
+
+      var nodes4 = document.querySelectorAll('.confidenceScore4');
+      for (var i = 0; i < nodes4.length; i++) {
+              nodes4[i].style.backgroundColor = 'red';
+              nodes4[i].style.color = 'white';
+      }
+
+       this.confidenceScoreOn = false;
+    }
+
   },
 
   saveLocally: function(data){
