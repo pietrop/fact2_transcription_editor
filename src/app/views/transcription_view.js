@@ -783,6 +783,7 @@ pasteHtmlAtCaret: function (html) {
 
   showHideConfidenceScores: function(){
     //TODO: this could be refactored to be cleaner and less code repetition.
+    //and less hard coded preferences.
     console.log("show hide confidence scores");
 
     if(!this.confidenceScoreOn){
@@ -793,7 +794,7 @@ pasteHtmlAtCaret: function (html) {
               nodes2[i].style.color = 'black';
       }
 
-       var nodes3 = document.querySelectorAll('.confidenceScore3');
+      var nodes3 = document.querySelectorAll('.confidenceScore3');
       for (var i = 0; i < nodes3.length; i++) {
               nodes3[i].style.backgroundColor = 'white';
               nodes3[i].style.color = 'black';

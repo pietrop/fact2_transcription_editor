@@ -45,7 +45,7 @@ See mobile responsive screenshots  [here](screenshots/Fact2_transcription_text_e
 using the terminal navigate to the folder where you'd like to add the project, and clone this repo as follow
 
 ```bash
-git clone git@github.com:frisch1/transcription_editor_factbase.git
+git clone git@github.com:pietrop/fact2_transcription_editor.git
 ```
 
 get into the folder
