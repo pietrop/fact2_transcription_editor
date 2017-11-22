@@ -3,6 +3,8 @@ const $ = require('jquery');
 const _ = require('underscore');
 const Backbone = require('backbone');
 
+const stopwatch = require('simple-stopwatch');
+
 const convertSecondsToTimeCodes = require('../../lib/timecode_converter/index.js').convertSecondsToTimeCodes;
 const convertTimeCodeToSeconds = require('../../lib/timecode_converter/index.js').convertTimeCodeToSeconds;
 
@@ -74,6 +76,10 @@ module.exports = Backbone.View.extend({
     //     clearInterval(t);
     //   }
     // },500);
+    // 
+    
+
+ 
 
   },
 
@@ -213,7 +219,15 @@ module.exports = Backbone.View.extend({
       //setInterval(function(){
       //self.saveLocally();},
       //15000);
-    
+      this.initializeTimer();
+    },
+
+    initializeTimer: function(){
+        //stop watch 
+        stopwatch(0, '%h hours %m min %s sec').on('tick', function (time) {
+          document.querySelector("#stopWatch").value = time;
+            // console.log(time);
+        }).start();
     },
 
     // setupConfidenceScore: function(){
