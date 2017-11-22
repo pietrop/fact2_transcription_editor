@@ -283,3 +283,10 @@ body{
         margin-left: 10px;
     }
 }
+
+/*Styling section headers */
+h1.sectionHeader {
+    font-size: 22px;
+    cursor: text;
+    color: grey;
+}

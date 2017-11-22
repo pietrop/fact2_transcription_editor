@@ -251,7 +251,7 @@
      <% }else{%>
       contenteditable='true'
      <% } %>
-     ><%= (editor_mode) %> <% paragraphs.forEach(function(p){ %><p> <span class="speakerLabel">~<%=p.speaker %>~</span></p><p><%p.words.forEach(function(w){%><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>"<% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start!==null){%><%if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2")%><%}else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%=w.word%> </span><%})%></p><%})%></div>
+     ><% paragraphs.forEach(function(p){ %><p> <span class="speakerLabel">~<%=p.speaker %>~</span></p><p><%p.words.forEach(function(w){%><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>"<% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start!==null){%><%if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2")%><%}else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%=w.word%> </span><%})%></p><%})%></div>
   </div>
     <!-- Col 3 -->
     <div class="col-xs-12 col-sm-3  col-md-3  col-lg-3 ">
@@ -309,6 +309,16 @@
      </div>
      <hr>
 
+      <div class="row">
+        <div class="col-xs-3 col-sm-4  col-md-4  col-lg-3">
+          <span class="btn btn-primary btn-xs addSectionHeaderBtn">add section break</span>
+        </div>
+        <div class="col-xs-9 col-sm-7  col-md-8  col-lg-9">
+         <!-- <br> -->
+         <span class="help-block">Add section break text. Subheads.</span>
+       </div>
+     </div>
+        <hr>
 
 
                  <div class="row">

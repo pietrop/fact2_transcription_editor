@@ -129,6 +129,8 @@ module.exports = Backbone.View.extend({
     "click .addSpeakerBtn":"addSpeaker",
     "click .addDescriptionBtn": "addDescription",
 
+    "click .addSectionHeaderBtn": 'addSectionHeader',
+
     "click .restoreLastSaved": "restoreLastSavedLocally",
 
     "click #showHideMediaPreviewCheckBox" :"hideShowMediaPreview",
@@ -184,10 +186,11 @@ module.exports = Backbone.View.extend({
     'ctrl+k'     : 'changeCurrentTime',
     'f5'         : 'rollBack',
     'ctrl+5'     : 'rollBack',
-    "ctrl+/"    : 'showKeyboardShortcuts',
+    "ctrl+/"     : 'showKeyboardShortcuts',
     'ctrl+6'     : 'addSpeaker',
-    'ctrl+7'      : 'addDescription',
-    'ctrl+s'      : 'intermediateSaveLocally'
+    'ctrl+7'     : 'addDescription',
+    'ctrl+8'     : 'addSectionHeader',
+    'ctrl+s'     : 'intermediateSaveLocally'
   },
 
     setupMedia: function(){
@@ -680,8 +683,27 @@ module.exports = Backbone.View.extend({
         alert("Your cursor needs to be inside the text editor, at the point where you'd like to add a new speaker label.");
       }
     }
+  },
 
 
+  addSectionHeader: function(){
+    var descriptionText = prompt("What's the text you'd like to add in the section header subhead?", "some section header text");
+    if( descriptionText == ""){
+      alert("Section headers cannot be empty, type some text");
+    }else{
+      //a bit messy, but covering edge cases when adding a new speaker, to make sure it is inside the text box. 
+      if( 
+        (window.getSelection().type == ("Caret")) && 
+        (window.getSelection().baseNode.parentNode.classList.contains("words") 
+          ||  window.getSelection().baseNode.parentNode.classList.contains("textBox") 
+          ||  window.getSelection().baseNode.parentNode.classList.contains("speakerLabel") 
+          ||  window.getSelection().baseNode.parentNode.nodeName == "P" )
+         ){
+        this.pasteHtmlAtCaret("<h1 class='sectionHeader'>"+descriptionText+"</h1>");
+      }else{
+        alert("Your cursor needs to be inside the text editor, at the point where you'd like to add a new speaker label.");
+      }
+    }
   },
 
 // Helper function 
