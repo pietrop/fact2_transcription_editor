@@ -42,12 +42,16 @@ module.exports = Backbone.Router.extend({
   },
 
   showTranscription: function(queryString) {
+
     var  params = parseQueryString(queryString);
+    console.log('params',params);
     if( params.id == undefined){
-      alert("not a valid request");
+      alert("not a valid request, missing id paramter");
+    }else if(params.user == undefined){
+       alert("not a valid request, missing user parameter");
     }else{
-     
-      var tmpTranscription = new Transcription({ id: params.id });
+      var tmpTranscription = new Transcription({ id: params.id,  user: params.user });
+      // tmpTranscription.set({ meta: { user: params.user}});
       window.tmpTranscription = tmpTranscription;
       console.info("version in router",tmpTranscription.attributes.meta.version);
       //TODO: add loading message / view 

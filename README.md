@@ -72,7 +72,7 @@ This runs webpack [`webpack-dev-server`](https://github.com/webpack/webpack-dev-
 
 Then Open following page in your prefered browser.
 
-[http://0.0.0.0:9000/#transcription?id=vid-2017-10-03](http://127.0.0.1:9000/#transcription?id=vid-2017-10-03)
+[http://0.0.0.0:9000/#transcription?id=vid-2017-10-03](http://0.0.0.0:9000/#transcription?id=vid-2017-10-03)
 
 Change the id query field in the url accordingly to load different transcripts.
 

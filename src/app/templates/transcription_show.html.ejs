@@ -243,10 +243,9 @@
                 </div>  
                 <!-- Col 2 -->
     <div class="col-xs-12 col-sm-6  col-md-6  col-lg-6">
-
     <!-- Text editor component  -->
     <!-- interpolating speakers at the beginning of paragraphs  -->
-    <div class="form-control textBox mousetrap"  contenteditable="true"><%  paragraphs.forEach(function(p){ %><p> <span class="speakerLabel">~<%= p.speaker %>~</span></p><p><% p.words.forEach(function(w){ %><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>" <% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start !== null){%> <% if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2") %> <% }else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%= w.word +" "%></span><% }) %></p><% }) %></div>
+    <div class="form-control textBox mousetrap"  contenteditable="true"><% paragraphs.forEach(function(p){ %><p> <span class="speakerLabel">~<%= p.speaker %>~</span></p><p><% p.words.forEach(function(w){ %><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>" <% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start !== null){%> <% if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2") %> <% }else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%= w.word +" "%></span><% }) %></p><% }) %></div>
   </div>
     <!-- Col 3 -->
     <div class="col-xs-12 col-sm-3  col-md-3  col-lg-3 ">
