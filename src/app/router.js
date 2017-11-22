@@ -49,8 +49,25 @@ module.exports = Backbone.Router.extend({
       alert("not a valid request, missing id paramter");
     }else if(params.user == undefined){
        alert("not a valid request, missing user parameter");
+      
     }else{
-      var tmpTranscription = new Transcription({ id: params.id,  user: params.user });
+       //TOODO: need to refactor type checking for params.editor_mode attribute to make sure it is a bool.
+      // if(params.editor_mode !== undefined){
+      //   if(params.editor_mode == "true" || params.editor_mode == "false"){
+      //     if(params.editor_mode == "true" ){
+      //       params.editor_mode = true;
+      //     }else{
+      //        params.editor_mode = false;
+      //     }
+      //   }else{
+      //     params.editor_mode = false;
+      //   }
+      // }else{
+      //   params.editor_mode = false;
+      // }
+      //end type checking for params.editor_mode
+      
+      var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode });
       // tmpTranscription.set({ meta: { user: params.user}});
       window.tmpTranscription = tmpTranscription;
       console.info("version in router",tmpTranscription.attributes.meta.version);

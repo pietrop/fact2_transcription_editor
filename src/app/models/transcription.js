@@ -47,9 +47,10 @@ module.exports = Backbone.Model.extend({
 			"api_key" : config.key,
 		    "meta": {"status":  "in progress"},
 		    //'source' should be "Copy Desk"
-		    "source":     "Copy Desk",
+		    "source":  "Copy Desk",
 		    // 'editor' will be the copy editor. Need a place to pass that value when we add the auth. Can be blank for now
-		    "editor": ""
+		    "editor": "",
+		    "editor_mode": false
 		 },
 
 		 finalSave: function (text){

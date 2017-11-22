@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --progress --watch",
-    "start": "webpack-dev-server --open",
+    "start": "webpack-dev-server",
     "test": "jest",
     "mock_api": "node ./mock_api_dev_server/index.js"
   },
