@@ -14,16 +14,17 @@ var Transcription = require('./models/transcription.js');
  * @param {(Object|String)} string_or_view A string or backbone view
  **/
 function displayMain(string_or_view) {
-  var content;
+  // var content;
   if (typeof string_or_view === 'string') {
-    content = string_or_view;
+    var content = string_or_view;
      document.querySelector("#main").innerHTML = content;
   } else {
     //TODO: window is for troubleshooting, remove when done.
     window.string_or_view =  string_or_view; 
-    content = string_or_view.render().el;
+    var content = string_or_view.render().el;
     // string_or_view.render();
-    $("#main").replaceWith(content);  
+    $("#main").html(content);  
+    // document.querySelector("#main").innerHTML = content;
   }
 }
 
@@ -33,12 +34,17 @@ function displayMain(string_or_view) {
 module.exports = Backbone.Router.extend({
   routes: {
     'transcription?*queryString': 'showTranscription',
+    'done': 'doneView',
     // 'settings':'settingsPanel',
     '*path': 'notFound'
   },
 
   initialize: function() {
 
+  },
+
+  doneView: function(){
+     displayMain("<h1>Thank you, You are done with this transcription.<h1>");
   },
 
   showTranscription: function(queryString) {
@@ -51,28 +57,41 @@ module.exports = Backbone.Router.extend({
        alert("not a valid request, missing user parameter");
       
     }else{
-       //TOODO: need to refactor type checking for params.editor_mode attribute to make sure it is a bool.
-      // if(params.editor_mode !== undefined){
-      //   if(params.editor_mode == "true" || params.editor_mode == "false"){
-      //     if(params.editor_mode == "true" ){
-      //       params.editor_mode = true;
-      //     }else{
-      //        params.editor_mode = false;
-      //     }
-      //   }else{
-      //     params.editor_mode = false;
-      //   }
-      // }else{
-      //   params.editor_mode = false;
-      // }
-      //end type checking for params.editor_mode
+  
+      if(params.editor_mode == "true" ){
+        //if true then content editable is set to false.
+        params.editor_mode == true;
+      }else if(params.editor_mode == "false"){
+        params.editor_mode == false;
+      //if param not passed or invalid then go into editor mode. 
+      }else if (params.editor_mode == undefined){
+        params.editor_mode == true;
+      }else{
+        params.editor_mode == true;
+      }
+
+
+       if(params.grammarly == "true" ){
+        //if true then content editable is set to false.
+        params.grammarly == true;
+      }else if(params.grammarly == "false"){
+        params.grammarly == false;
+      //if param not passed or invalid then go into editor mode. 
+      }else if (params.grammarly == undefined){
+        params.grammarly == false;
+      }else{
+        params.grammarly == false;
+      }
+
+
+      console.log(" params.editor_mode", params.editor_mode, typeof  params.editor_mode);
       
-      var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode });
+      var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode , grammarly: params.grammarly});
       // tmpTranscription.set({ meta: { user: params.user}});
       window.tmpTranscription = tmpTranscription;
       console.info("version in router",tmpTranscription.attributes.meta.version);
       //TODO: add loading message / view 
-      displayMain('Loading transcription ...');
+      // displayMain('Loading transcription ...');
     
       tmpTranscription.fetch({
               reset: true,

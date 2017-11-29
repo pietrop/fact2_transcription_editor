@@ -45,12 +45,12 @@ module.exports = Backbone.Model.extend({
 		},
 		defaults: {
 			"api_key" : config.key,
-		    "meta": {"status":  "in progress"},
+		    "meta": {"status":  "new"},
 		    //'source' should be "Copy Desk"
 		    "source":  "Copy Desk",
 		    // 'editor' will be the copy editor. Need a place to pass that value when we add the auth. Can be blank for now
-		    "editor": "",
-		    "editor_mode": false
+		    "editor": ""
+		    // "editor_mode": false
 		 },
 
 		 finalSave: function (text){
@@ -70,20 +70,24 @@ module.exports = Backbone.Model.extend({
 					call_type: "write",
 					media_type: this.attributes.meta.media_type,
 					version: this.attributes.meta.version,
-					api_key: config.key
+					api_key: config.key,
+					status: "forApproval"
 		 		}
 		 	});
 
 
-
 		 	this.save({
 			    success: function (model, response) {
+			    	alert("Transcription has been saved");
 			        console.info("success, final save transcription model ", model, response);
 			    	console.info(JSON.stringify(model, 2, null));
+			    	alert("Transcription final save - success");
 			    },
 			    error: function (model, response) {
+			    	alert("There was an error while trying to save the transcription");
 			        console.error("error, final save transcription model",model, response);
 			   		console.error(JSON.stringify(model, 2, null));
+			   		alert("Transcription final save - Error, contact system administrator");
 			    }
 			});
 
@@ -109,18 +113,20 @@ module.exports = Backbone.Model.extend({
 					call_type: "write",
 					media_type: this.attributes.meta.media_type,
 					version: this.attributes.meta.version,
-					api_key: config.key
-
-		 		}
+					api_key: config.key,
+					status: "inProgress"
+		 		}, 
 		 	});
 
 	 		this.save({
 			    success: function (model, response) {
 			        console.log("in transcription model intermediate save - success", model, response);
-			         console.info(JSON.stringify(model, 2, null));
+			        // alert("Transcription model intermediate save - success");
+			        console.info(JSON.stringify(model, 2, null));
 			    },
 			    error: function (model, response) {
 			        console.error("in transcription model - error",model, response);
+			        // alert("Transcription model intermediate save - Error, contact system administrator");
 			        console.error(JSON.stringify(model, 2, null));
 			    }
 			});

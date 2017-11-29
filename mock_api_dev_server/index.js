@@ -7,7 +7,7 @@ const app = express();
 const path = require('path');
 
 //load sample data
-var sampleJsonTranscription = require('./sample.json');
+var sampleJsonTranscription = require('./sample3.json');
 
 //enable cross origin request  - https://enable-cors.org/server_expressjs.html
 app.use(function(req, res, next) {

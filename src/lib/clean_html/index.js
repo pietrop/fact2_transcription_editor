@@ -13,7 +13,7 @@ function cleanHTML(dirty) {
             'div': sanitizeHtml.simpleTransform('p'),
         },
         allowedAttributes: {
-            'span': [ 'class', 'speakerLabel', 'confidenceScore4','confidenceScore3','confidenceScore2','wordnoTimeCode','contentEditable','data-*' ]
+            'span': [ 'class', 'speakerLabel', 'confidenceScore4','sectionHeader','wordnoTimeCode','editableSection','confidenceScore3','confidenceScore2','wordnoTimeCode','contentEditable','data-*' ]
         }
     });
 };

@@ -39,6 +39,8 @@ module.exports = Backbone.View.extend({
     });
 
 
+    this.changesSinceLastSave = false; 
+
     this.typingTimer;
     this.playPauseControl =false;
     this.playBtnIconEl =  this.el.querySelector("#playBtnIcon");
@@ -62,8 +64,13 @@ module.exports = Backbone.View.extend({
 	setInterval(serverSideSaveTimer, saveInterval(saveIntervalMinutes));
 
     function serverSideSaveTimer() {
-      var tmpText = self.getPlainText(); 
-      self.model.updateParagraphs(tmpText);
+      // TODO: if there has been changes since last save. 
+      if(this.changesSinceLastSave){
+        var tmpText = self.getPlainText(); 
+        self.model.updateParagraphs(tmpText);
+        this.changesSinceLastSave = false; 
+      }
+      
     }
 
 
@@ -149,6 +156,10 @@ module.exports = Backbone.View.extend({
 
     "click .fetchFromServerBtn": "fetchFromServer",
 
+    "click .editableSection": "enableEditableSection",
+
+    "click .grammarlyCheck": "toggleGrammarly",
+
 
     //implementing backbone double click as described here 
     // https://gist.github.com/iliyat/dbe3d4c435d26e87b164
@@ -218,9 +229,10 @@ module.exports = Backbone.View.extend({
 
       ////TROUBLESHOOTING_PERFORMANCE
       ////saves text locally every 15 seconds. 
-      //setInterval(function(){
-      //self.saveLocally();},
-      //15000);
+      setInterval(function(){
+        self.saveLocally();
+      },15000);
+    
       this.initializeTimer();
     },
 
@@ -614,6 +626,8 @@ module.exports = Backbone.View.extend({
     },
 
     typing: function(e){ 
+      //used with the server timer. if there are no changes does not save. 
+      this.changesSinceLastSave = true; 
       //TODO: check for speaker labels 
       var self = this;
       var typingDelaySeconds= parseInt($('#inputTypingDelaySeconds').val());
@@ -718,7 +732,7 @@ module.exports = Backbone.View.extend({
           ||  window.getSelection().baseNode.parentNode.classList.contains("speakerLabel") 
           ||  window.getSelection().baseNode.parentNode.nodeName == "P" )
          ){
-        this.pasteHtmlAtCaret("<h1 class='sectionHeader'>"+descriptionText+"</h1>");
+        this.pasteHtmlAtCaret("<h1 class='sectionHeader'>{ "+descriptionText+" }</h1>");
       }else{
         alert("Your cursor needs to be inside the text editor, at the point where you'd like to add a new speaker label.");
       }
@@ -833,7 +847,7 @@ pasteHtmlAtCaret: function (html) {
   },
 
   saveLocally: function(data){
-     var tmpData = cleanHTML(document.querySelector('.textBox').innerHTML);
+     var tmpData = document.querySelector('.textBox').innerHTML;
      this.model.saveLocally(tmpData);
   },
 
@@ -849,7 +863,7 @@ pasteHtmlAtCaret: function (html) {
   restoreLastSavedLocally: function(){
     // console.log("restoreLastSaved");
     var tmpHtml = this.model.retrieveFromLocalStorage();
-    document.querySelector('.textBox').innerHTML = cleanHTML(tmpHtml);
+    document.querySelector('.textBox').innerHTML = tmpHtml;
     //need to reactivate the hypertranscript. 
     this.setupHyperTranscriptColorProgressIndication();
   },
@@ -864,9 +878,21 @@ pasteHtmlAtCaret: function (html) {
   }, 
 
   finalSave: function(){
-    var tmpText = this.getPlainText(); 
+
+    var tmpText = document.getElementById("grammarlyTextAread").value;
+    // var tmpText = this.getPlainText(); 
+    //Needs to find a way in JS to close the window. 
+    
     this.model.finalSave(tmpText);
+    //TODO: this should be connected with the model callback response, if scuesfully saved then .. otherwsie..
     alert("Final Save Complete. You May Close the Editor");
+
+  document.getElementById("hiddenGrammarlyButton").click();
+
+    //change to done page 
+   window.location.hash = 'done';
+
+    
   },
   fetchFromServer: function() {
 		var redButtonConfirm = confirm("If you continue, we will fetch the last known good copy from the server. This is only if your local copy is corrupted. You could lose some of your work. Use carefully");
@@ -876,6 +902,39 @@ pasteHtmlAtCaret: function (html) {
 		} else {
     	}
 	},
+
+  enableEditableSection: function(e){
+    // make all other elements non content edtiable and then enable the one clicked on. 
+    var ediableSections = document.querySelectorAll(".editableSection");
+
+    console.log(e.target, e.target.parentNode, "e.target", e);
+    ediableSections.forEach((s)=>{
+      if(s != e.target){
+        s.contentEditable = false;
+      }
+    });
+
+    if(e.target.parentNode.classList.contains("editableSection")){
+      e.target.parentNode.contentEditable = true;
+    }else if(e.target.classList.contains("editableSection")){
+      e.target.contentEditable = true;
+    }
+  },
+
+  toggleGrammarly: function(){
+
+    document.getElementById("hiddenGrammarlyButton").click();
+
+
+    // document.querySelector(".textBox").dataset.gramm_editor = true;
+
+
+
+    document.getElementById("grammarlyTextAread").value = document.querySelector(".textBox").innerText;
+
+    // this.model.set({grammarly: true});
+    // location.reload();
+  }, 
 
   /**
   * @function render

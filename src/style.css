@@ -19,7 +19,7 @@ html, body {
 }
 
 div#main {
-    padding-top: 23px!important;
+    /*padding-top: 23px!important;*/
 }
 
 
@@ -290,3 +290,11 @@ h1.sectionHeader {
     cursor: text;
     color: grey;
 }
+
+
+/*p.editableSection {
+    display: -webkit-flex; 
+    -webkit-flex-wrap: wrap;
+    display: flex;   
+    flex-wrap: wrap;
+}*/

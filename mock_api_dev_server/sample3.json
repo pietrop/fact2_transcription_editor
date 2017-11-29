@@ -1,0 +1,1045 @@
+{
+    "editor_mode": false,
+    "grammarly": true,
+    "meta": {
+        "id": "vid-2017-10-03",
+        "date": "2017-10-03",
+        "ticker": "vid",
+        "status": "raw",
+        "call_type": "read",
+        "media_type": "video",
+        "version": "1507076602",
+        "media_file": "http://0.0.0.0:3000/public/vid-2017-10-03.mp4"
+    },
+    "paragraphs":
+[
+  {
+    "speaker": "Donald Trump 0",
+    "type": "paragraph",
+    "text": "Well, thank you very much. It was a great trip and a beautiful place. I've been to Puerto Rico many times as, I think, most of you have known. And I've always loved it. And your weather is second to none, but every once in a while you get hit. And you really got hit -- there's no question about it.",
+    "seq": 0,
+      "words": [
+                {
+                    "seq": 0,
+                    "word": "Well,",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 1,
+                    "word": "thank",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 2,
+                    "word": "you",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 3,
+                    "word": "very",
+                    "sub_start": "0.000",
+                    "sub_end": "0.040",
+                    "confidence": 0.80
+                },
+                {
+                    "seq": 4,
+                    "word": "much.",
+                    "sub_start": "0.040",
+                    "sub_end": "0.640",
+                    "confidence": 0.95
+                },
+                {
+                    "seq": 5,
+                    "word": "It",
+                    "sub_start": "0.640",
+                    "sub_end": "1.120",
+                    "confidence": 0.70
+                },
+                {
+                    "seq": 6,
+                    "word": "was",
+                    "sub_start": "1.120",
+                    "sub_end": "1.840",
+                    "confidence": 0.50
+                },
+                {
+                    "seq": 7,
+                    "word": "a",
+                    "sub_start": "1.840",
+                    "sub_end": "2.320",
+                    "confidence": 0.99
+                },
+                {
+                    "seq": 8,
+                    "word": "great",
+                    "sub_start": "2.320",
+                    "sub_end": "2.640",
+                    "confidence": null
+                },
+                {
+                    "seq": 9,
+                    "word": "trip",
+                    "sub_start": "2.640",
+                    "sub_end": "3.760",
+                    "confidence": null
+                },
+                {
+                    "seq": 10,
+                    "word": "and",
+                    "sub_start": "3.760",
+                    "sub_end": "4.440",
+                    "confidence": null
+                },
+                {
+                    "seq": 11,
+                    "word": "a",
+                    "sub_start": "4.440",
+                    "sub_end": "4.720",
+                    "confidence": null
+                },
+                {
+                    "seq": 12,
+                    "word": "beautiful",
+                    "sub_start": "4.720",
+                    "sub_end": "5.080",
+                    "confidence": null
+                },
+                {
+                    "seq": 13,
+                    "word": "place.",
+                    "sub_start": "5.080",
+                    "sub_end": "6.040",
+                    "confidence": null
+                },
+                {
+                    "seq": 14,
+                    "word": "I've",
+                    "sub_start": "6.040",
+                    "sub_end": "6.200",
+                    "confidence": null
+                },
+                {
+                    "seq": 15,
+                    "word": "been",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 16,
+                    "word": "to",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 17,
+                    "word": "Puerto",
+                    "sub_start": "6.200",
+                    "sub_end": "6.680",
+                    "confidence": null
+                },
+                {
+                    "seq": 18,
+                    "word": "Rico",
+                    "sub_start": "6.680",
+                    "sub_end": "6.800",
+                    "confidence": null
+                },
+                {
+                    "seq": 19,
+                    "word": "many",
+                    "sub_start": "6.800",
+                    "sub_end": "7.000",
+                    "confidence": null
+                },
+                {
+                    "seq": 20,
+                    "word": "times",
+                    "sub_start": "7.000",
+                    "sub_end": "7.880",
+                    "confidence": null
+                },
+                {
+                    "seq": 21,
+                    "word": "as,",
+                    "sub_start": "7.880",
+                    "sub_end": "8.080",
+                    "confidence": null
+                },
+                {
+                    "seq": 22,
+                    "word": "I",
+                    "sub_start": "8.080",
+                    "sub_end": "8.240",
+                    "confidence": null
+                },
+                {
+                    "seq": 23,
+                    "word": "think,",
+                    "sub_start": "8.240",
+                    "sub_end": "8.440",
+                    "confidence": null
+                },
+                {
+                    "seq": 24,
+                    "word": "most",
+                    "sub_start": "8.440",
+                    "sub_end": "9.000",
+                    "confidence": null
+                },
+                {
+                    "seq": 25,
+                    "word": "of",
+                    "sub_start": "9.000",
+                    "sub_end": "9.200",
+                    "confidence": null
+                },
+                {
+                    "seq": 26,
+                    "word": "you",
+                    "sub_start": "9.200",
+                    "sub_end": "9.280",
+                    "confidence": null
+                },
+                {
+                    "seq": 27,
+                    "word": "have",
+                    "sub_start": "9.280",
+                    "sub_end": "9.560",
+                    "confidence": null
+                },
+                {
+                    "seq": 28,
+                    "word": "known.",
+                    "sub_start": "9.560",
+                    "sub_end": "10.000",
+                    "confidence": null
+                },
+                {
+                    "seq": 29,
+                    "word": "And",
+                    "sub_start": "10.000",
+                    "sub_end": "10.600",
+                    "confidence": null
+                },
+                {
+                    "seq": 30,
+                    "word": "I've",
+                    "sub_start": "10.600",
+                    "sub_end": "10.720",
+                    "confidence": null
+                },
+                {
+                    "seq": 31,
+                    "word": "always",
+                    "sub_start": "10.720",
+                    "sub_end": "11.080",
+                    "confidence": null
+                },
+                {
+                    "seq": 32,
+                    "word": "loved",
+                    "sub_start": "11.080",
+                    "sub_end": "11.360",
+                    "confidence": null
+                },
+                {
+                    "seq": 33,
+                    "word": "it.",
+                    "sub_start": "11.360",
+                    "sub_end": "11.560",
+                    "confidence": null
+                },
+                {
+                    "seq": 34,
+                    "word": "And",
+                    "sub_start": "11.560",
+                    "sub_end": "11.720",
+                    "confidence": null
+                },
+                {
+                    "seq": 35,
+                    "word": "your",
+                    "sub_start": "11.720",
+                    "sub_end": "11.920",
+                    "confidence": null
+                },
+                {
+                    "seq": 36,
+                    "word": "weather",
+                    "sub_start": "11.920",
+                    "sub_end": "12.240",
+                    "confidence": null
+                },
+                {
+                    "seq": 37,
+                    "word": "is",
+                    "sub_start": "12.240",
+                    "sub_end": "12.400",
+                    "confidence": null
+                },
+                {
+                    "seq": 38,
+                    "word": "second",
+                    "sub_start": "12.400",
+                    "sub_end": "12.680",
+                    "confidence": null
+                },
+                {
+                    "seq": 39,
+                    "word": "to",
+                    "sub_start": "12.680",
+                    "sub_end": "12.840",
+                    "confidence": null
+                },
+                {
+                    "seq": 40,
+                    "word": "none,",
+                    "sub_start": "12.840",
+                    "sub_end": "13.360",
+                    "confidence": null
+                },
+                {
+                    "seq": 41,
+                    "word": "but",
+                    "sub_start": "13.360",
+                    "sub_end": "13.840",
+                    "confidence": null
+                },
+                {
+                    "seq": 42,
+                    "word": "every",
+                    "sub_start": "13.840",
+                    "sub_end": "14.200",
+                    "confidence": null
+                },
+                {
+                    "seq": 43,
+                    "word": "once",
+                    "sub_start": "14.200",
+                    "sub_end": "14.880",
+                    "confidence": null
+                },
+                {
+                    "seq": 44,
+                    "word": "in",
+                    "sub_start": "14.880",
+                    "sub_end": "15.480",
+                    "confidence": null
+                },
+                {
+                    "seq": 45,
+                    "word": "a",
+                    "sub_start": "15.480",
+                    "sub_end": "15.760",
+                    "confidence": null
+                },
+                {
+                    "seq": 46,
+                    "word": "while",
+                    "sub_start": "15.760",
+                    "sub_end": "16.000",
+                    "confidence": null
+                },
+                {
+                    "seq": 47,
+                    "word": "you",
+                    "sub_start": "16.000",
+                    "sub_end": "16.040",
+                    "confidence": null
+                },
+                {
+                    "seq": 48,
+                    "word": "get",
+                    "sub_start": "16.040",
+                    "sub_end": "16.600",
+                    "confidence": null
+                },
+                {
+                    "seq": 49,
+                    "word": "hit.",
+                    "sub_start": "16.600",
+                    "sub_end": "17.120",
+                    "confidence": null
+                },
+                {
+                    "seq": 50,
+                    "word": "And",
+                    "sub_start": "17.120",
+                    "sub_end": "17.480",
+                    "confidence": null
+                },
+                {
+                    "seq": 51,
+                    "word": "you",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 52,
+                    "word": "really",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 53,
+                    "word": "got",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 54,
+                    "word": "hit",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 55,
+                    "word": "--",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 56,
+                    "word": "there's",
+                    "sub_start": null,
+                    "sub_end": null,
+                    "confidence": null
+                },
+                {
+                    "seq": 57,
+                    "word": "no",
+                    "sub_start": "17.480",
+                    "sub_end": "18.000",
+                    "confidence": null
+                },
+                {
+                    "seq": 58,
+                    "word": "question",
+                    "sub_start": "18.000",
+                    "sub_end": "18.680",
+                    "confidence": null
+                },
+                {
+                    "seq": 59,
+                    "word": "about",
+                    "sub_start": "18.680",
+                    "sub_end": "19.560",
+                    "confidence": null
+                },
+                {
+                    "seq": 60,
+                    "word": "it.",
+                    "sub_start": "19.560",
+                    "sub_end": "20.120",
+                    "confidence": null
+                }
+            ]
+  },
+  {
+    "speaker": "Donald Trump 1",
+    "type": "paragraph",
+    "text": "I want to thank, in particular, some of the folks that come here where really great danger was involved, right at the beginning. I have to start with Brock. Where's Brock? Brock -- Brock Long has been through a lot.",
+    "seq": 1
+  },
+  {
+    "text": "some section header text",
+    "type": "subheading",
+    "seq": 2
+  },
+  {
+    "speaker": "Donald Trump 2",
+    "type": "paragraph",
+    "text": "We gave him an A-plus in Texas. We thought he could rest for a couple of days, but before he got any rest, he had Florida, right? And you had  Louisiana, and you had other places. And, by the way, Louisiana -- we don't say it often -- but Louisiana got hit very hard also, and they've been fantastic.",
+    "seq": 3
+  },
+  {
+    "speaker": "Donald Trump 3",
+    "type": "paragraph",
+    "text": "But then he came to Florida, and that we gave him another A-plus.",
+    "seq": 4
+  },
+  {
+    "speaker": "Donald Trump 4",
+    "type": "paragraph",
+    "text": "And then, all of a sudden, we said there's another one heading out to Puerto Rico and to the U.S. Virgin Islands. But it wasn't one -- it was two.",
+    "seq": 5
+  },
+  {
+    "text": "some section header text 2",
+    "type": "subheading",
+    "seq": 6
+  },
+  {
+    "speaker": "Donald Trump 5",
+    "type": "paragraph",
+    "text": "And I was going to be here a week ago, if you remember, and that was the day of the hurricane -- that was the day of the second hurricane.",
+    "seq": 7
+  },
+  {
+    "speaker": "Donald Trump 6",
+    "type": "paragraph",
+    "text": "So Brock has been unbelievable. And this has been the toughest one. This has been a Category 5, which few people have ever even heard of -- a Category 5 hitting land.",
+    "seq": 8
+  },
+  {
+    "speaker": "Donald Trump 7",
+    "type": "paragraph",
+    "text": "But it hit land -- and, boy, did it hit land.",
+    "seq": 9
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "So I want to thank you. I want to thank Elaine. Elaine, thank you very much.",
+    "seq": 10
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Fantastic -- Acting Secretary. Elaine Duke has been incredible. Tom Bossert is here someplace.",
+    "seq": 11
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Tom, great job. Great job.",
+    "seq": 12
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And to all of my people -- and I have to say, General Buchanan got here a few days ago, and there's no doubt about it you are a general. There's a reason you're a general, right? But he's no games. I said, give me a general; I don't want to have any -- I don't want to have a general that plays games.",
+    "seq": 13
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And you've done a fantastic job. The whole team has been amazing.",
+    "seq": 14
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "vour governor has been -- who I didn't know; I heard very good things about him. He's not even from my party, and he started right at the beginning appreciating what we did. And he was tremendously supportive, and he knew the level of problem that you had at the beginning, before, and the level -- what happened with respect to the tremendous storms that hit your beautiful island.",
+    "seq": 15
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And, Governor, I just want to tell you that, right from the beginning, this governor did not play politics. He didn't play it at all. He was saying it like it was, and he was giving us the highest grades.",
+    "seq": 16
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And I want to -- on behalf of our country, I want to thank you. [Applause]",
+    "seq": 17
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "I also want to thank your congresswoman, who actually represents the largest number of people of any congressperson in the United States. I know that. It's 3.5 million people, Jenniffer, right? So Congresswoman Jenniffer González-Colón, who I've watched the other day and she was saying such nice things about all of the people that have worked so hard.",
+    "seq": 18
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Jenniffer, do you think you could say a little bit what you said about us today? And it's not about me, it's about these incredible people, from the military to FEMA, to first responders. I mean, I've never seen people working so hard in my life. Perhaps you could say, Congresswoman?",
+    "seq": 19
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "Thank you, Mr. President. The first thing is that, before we were hit by Maria, we were hit by Hurricane Irma.",
+    "seq": 20
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "And during that time, before the hurricane, here was FEMA acting together with a lot of employees. More than 4,000 people were here in the island from the different branches of the military -- HHS, Navy, Army, FEMA -- and all the staff working together before the hurricane hit. They were here before, during, after the first hurricane, and they continued to stay on the island, boots on the ground.",
+    "seq": 21
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "During Maria -- same thing.",
+    "seq": 22
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "I think we never got the level of communication between the federal government and the government like never before. And we are in the path of the hurricane, so we are used to receiving hurricanes, but never before a Category 5. The amount of devastation is unheard of.",
+    "seq": 23
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "But during all this time, we got the federal government by our side, doing the job of the people here, like you in the military, doing all that has been asked. All the questions and requests that the governor did, the President and his Cabinet accomplished it and send more people, and has continued to send in more people -- trucks, drivers, and resources. Thank you, Mr.",
+    "seq": 24
+  },
+  {
+    "speaker": "Jennifer Gonzalez Colon",
+    "type": "paragraph",
+    "text": "President, for all you've been doing for the island.",
+    "seq": 25
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Well, I want to thank you because you were really generous. And I saw those comments, and everybody saw those comments, and we really appreciate it.",
+    "seq": 26
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And, you know, it's so important, when you have men and women that have worked so hard and so long, and many of them came from two other catastrophic hurricanes. They came from Texas, they came from Louisiana, they came from Florida, and there was no -- how many nights' rest have you gotten? Zero in the last month, right?",
+    "seq": 27
+  },
+  {
+    "speaker": "Audience Member",
+    "type": "paragraph",
+    "text": "This is day 43.",
+    "seq": 28
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Well, we're going to keep them for another couple of weeks. And by that time, I think -- well -- come here. Special guy, I will tell you -- special.",
+    "seq": 29
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Really good. [Applause]",
+    "seq": 30
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "I also -- in addition to Tom, I also want to thank Linda McMahon, Small Business. I always joke -- I said, she's in charge of small business, but small business is massive business when you add it all up. And she has done an incredible job -- built a great company with her husband, Vince McMahon.",
+    "seq": 31
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And I wanted her so badly for this position because there's nobody that knows how to build a company like those and, let me tell you, like this woman. She has been amazing in business, and now she's doing an incredible job as the Administrator. We want to thank you, Linda, very much. [Applause]",
+    "seq": 32
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And Mick Mulvaney is here -- right there -- and Mick is in charge of a thing called \"budget.\"\" Now",
+    "seq": 33
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "If you look at the -- every death is a horror. But if you look at a real catastrophe like Katrina, and you look at the tremendous hundreds and hundreds and hundreds of people that died, and you look at what happened here with, really, a storm that was just totally overpowering -- nobody has ever seen anything like this. What is your death count, as of this moment -- 17?",
+    "seq": 34
+  },
+  {
+    "speaker": "Audience Member",
+    "type": "paragraph",
+    "text": "Sixteen certified.",
+    "seq": 35
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Sixteen people certified. Sixteen people versus in the thousands. You can be very proud of all of your people, all of our people working together.",
+    "seq": 36
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Sixteen versus literally thousands of people. You can be very proud. Everybody around this table and everybody watching can really be very proud of what's taken place in Puerto Rico.",
+    "seq": 37
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "I also want to pay a very special thanks to the Navy. Who's here from the Navy? Who do we have, General? Who do we have? What a job. So you have ships all over the place? I saw them flying in.",
+    "seq": 38
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "I said, boy, this looks like very big stuff. And the job you've done getting things here. There are no docks.",
+    "seq": 39
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "There have been -- we're just in the process of opening them up. They were just devastated. But there are no docks, no nothing.",
+    "seq": 40
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And the way you got this stuff on shore is incredible.",
+    "seq": 41
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "So I want to thank the Navy. Would you like to say something on behalf of the Navy? [Applause]",
+    "seq": 42
+  },
+  {
+    "speaker": "Navy Representative",
+    "type": "paragraph",
+    "text": "Sir, your Navy and Marine Corps team was here to respond and [Inaudible] immediately deployed -- four Navy ships, get here, and handle anything that happened in Irma, and then immediately repositioned and was able to respond to Puerto Rico right after Maria.",
+    "seq": 43
+  },
+  {
+    "speaker": "Navy Representative",
+    "type": "paragraph",
+    "text": "So the Navy and Marine Corps team [Inaudible] and saved lives and coordinated with FEMA, with the governor of Puerto Rico, and to demonstrate our ability to come from the sea, air, and land. Thank you very much.",
+    "seq": 44
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Thank you. And thank you very much. And I don't have to even mention the Marines because we have General Kelly. Where's General Kelly?",
+    "seq": 45
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Where is our General Kelly? He likes to keep a low profile. Look at him sitting in the back, but, boy, is he watching. You have no idea how he's -- General Kelly, come up here. So General Kelly is a four-star. Not a bad general, right? You don't get any better than General Kelly.",
+    "seq": 46
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "But on behalf of the Marines, I'll tell you, they've done some job, General.",
+    "seq": 47
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Now, can we also mention Army? And can we also mention some people that I really got to know and respect even more in Texas, and that's the Coast Guard?",
+    "seq": 48
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "What a job the Coast Guard has done throughout this whole -- throughout this whole ordeal. [Applause] They would go right into the middle of that -- I mean, I don't know, I wouldn't want to be doing it, but I want to thank everybody. I want to thank the Coast Guard.",
+    "seq": 49
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "They are special, special, very brave people.",
+    "seq": 50
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And a lot of people got to see the real Coast Guard during this incredible trouble, and especially I think here and in Texas was incredible what they did. So thank you all very much. Thank you very much.",
+    "seq": 51
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "We appreciate it. Really appreciate it.",
+    "seq": 52
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Would you like to say something on behalf of your men and women?",
+    "seq": 53
+  },
+  {
+    "speaker": "Air Force Representative",
+    "type": "paragraph",
+    "text": "Sir, I'm representing the Air Force.",
+    "seq": 54
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "No, I know that.",
+    "seq": 55
+  },
+  {
+    "speaker": "Air Force Representative",
+    "type": "paragraph",
+    "text": "It's been a tremendous team effort partnering with FEMA and NORTHCOM, providing support now [Inaudible] also to U.S. Virgin Islands and to Puerto Rico, specifically trying to open up the airfields so that we can get -- as an island -- get the majority of the supplies and [Inaudible] with the people and personnel setting up across the island, set up logistics networks so we could really get to people that are the most hurt and devastated by the catastrophe.",
+    "seq": 56
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And the runways now are pretty open?",
+    "seq": 57
+  },
+  {
+    "speaker": "Air Force Representative",
+    "type": "paragraph",
+    "text": "Yes, sir. We have four major runways that are fully open and operational; flown about 700-plus strategic airlift sorties to and from OCONUS, [Inaudible] Puerto Rico to provide life-sustaining support.",
+    "seq": 58
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Amazing job. Amazing job. So amazing that we're ordering hundreds of millions of dollars' worth of new airplanes for the Air Force, especially the F-35.",
+    "seq": 59
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Do you like the F-35?",
+    "seq": 60
+  },
+  {
+    "speaker": "Air Force Representative",
+    "type": "paragraph",
+    "text": "[Inaudible] game-changing technology, awesome airplane.",
+    "seq": 61
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "I said, how does it do it in fights? And how do they do in fights with the F-35? They said, we do very well. You can't see it. Literally you can't see it.",
+    "seq": 62
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "So it's hard to fight a plane that you can't see, right?",
+    "seq": 63
+  },
+  {
+    "speaker": "Air Force Representative",
+    "type": "paragraph",
+    "text": "Sir, we like that.",
+    "seq": 64
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "But that's an expensive plane that you can't see. And as you probably heard, we cut the price very substantially -- something that other administrations would never have done, that I can tell you. So thank you very much.",
+    "seq": 65
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Where is the Coast Guard? Who can speak on behalf of the Coast Guard? Who can speak? Where is our Coast Guard representative?",
+    "seq": 66
+  },
+  {
+    "speaker": "Audience Member",
+    "type": "paragraph",
+    "text": "Coast Guard officer right here.",
+    "seq": 67
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Come here, get over here. Come here, come here. On behalf of the Coast Guard, just say a few words.",
+    "seq": 68
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Your people have been amazing. Go ahead.",
+    "seq": 69
+  },
+  {
+    "speaker": "Coast Guard Officer",
+    "type": "paragraph",
+    "text": "I don't think there's anything that the men and women of the Coast Guard would rather do than help the people of Puerto Rico, our fellow American citizens. For us, this is what we get to do on a daily basis. And getting to help our fellow citizens is just what our duty is all about.",
+    "seq": 70
+  },
+  {
+    "speaker": "Coast Guard Officer",
+    "type": "paragraph",
+    "text": "So it's our pleasure to be here, sir.",
+    "seq": 71
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Well, in Texas, it came in, it did devastation, then went right out into the coast, then it came in and out. It came in three times. It would load up with water and come in.",
+    "seq": 72
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Nobody has ever seen water like that.",
+    "seq": 73
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And the Coast Guard would follow it. It goes in, and they'd be right behind it, and then they'd move. They saved 16,000 lives in Texas.",
+    "seq": 74
+  },
+  {
+    "speaker": "Coast Guard Officer",
+    "type": "paragraph",
+    "text": "Yes, sir.",
+    "seq": 75
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Hard to believe -- between the helicopters and all of them. But the Coast Guard itself saved in Texas 16,000 lives, and they went right through that hurricane. And there aren't too many people who would have done it, believe me.",
+    "seq": 76
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Would you thank everybody for me?",
+    "seq": 77
+  },
+  {
+    "speaker": "Coast Guard Officer",
+    "type": "paragraph",
+    "text": "Yes, sir. Thank you.",
+    "seq": 78
+  },
+  {
+    "speaker": "Audience Member",
+    "type": "paragraph",
+    "text": "Mr. President, we also have our Customs and Border Protection sitting up over here.",
+    "seq": 79
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Say a few words. Please, say a few words. Customs and Border Protection, say a few words, please.",
+    "seq": 80
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Don't be shy. What I would like to do -- you want to stand up? Go ahead. That's okay.",
+    "seq": 81
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Stand up. Go ahead.",
+    "seq": 82
+  },
+  {
+    "speaker": "Audience Member",
+    "type": "paragraph",
+    "text": "[Inaudible]",
+    "seq": 83
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Okay. You did a great job. I just want to also add Rick Perry is here someplace.",
+    "seq": 84
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Rick -- governor of Texas for many years, 14 years -- did a great job, head of Energy. And Scott Pruitt from Environmental is here and doing an amazing -- really an amazing job. We appreciate it, fellas.",
+    "seq": 85
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Thank you very much. Governor, would you say a few words?",
+    "seq": 86
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "Of course. Well, first of all, Mr. President, thank you for being here.",
+    "seq": 87
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "Your presence over here with Cabinet members support the notion that we've been talking about: that this is a united effort. This is a united effort. We need to work together in order to overcome the many challenges that we have here in Puerto Rico.",
+    "seq": 88
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "I want to personally thank you, Mr. President, because over the course of the past week you have called essentially every day to make sure we have what we need, to make sure that the resources are over here.",
+    "seq": 89
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "And I want to let the people of Puerto Rico and the people on the United States know that you have always responded to us. And although this is big challenge, we are convinced that working together with our local government, FEMA, the Administrator, the DOD, and all the assets we have here, it is a challenging time, we need to do more, but we will be able to build Puerto Rico stronger than ever before. That is our commitment.",
+    "seq": 90
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "I just wanted to let you know that right now our forces are working so that they can deliver food and water to the people of Puerto Rico, so that diesel and fuel can get to the hospitals.",
+    "seq": 91
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "Now, it is a challenging time. It is a situation without precedent. But with strong leadership, with your continued support, Mr.",
+    "seq": 92
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "President, with the continued support of everybody around this table, the mayors that have played a critical role in this development, our legislature that has been helpful, and all of the assets in government -- I can tell you, Mr. President, that we will not only come out of this, we will stabilize Puerto Rico and we will build it stronger than ever. Thank you so much.",
+    "seq": 93
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Thank you, Governor. [Applause]",
+    "seq": 94
+  },
+  {
+    "speaker": "Ricardo Rossello",
+    "type": "paragraph",
+    "text": "Thank you. God bless.",
+    "seq": 95
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "Well, thank you, everybody. And we're going to make some tours now if anybody has any questions or statements or anything. I know we have a lot of powerful people -- a lot of your heads of your Senate, the heads of your everything.",
+    "seq": 96
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "And it's an honor to work with you folks. And we'll all get it done together.",
+    "seq": 97
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "So I appreciate your support and I know you appreciate our support, because our country has really gone all out to help. And it's not only dangerous, it's expensive, it's everything. But I consider it a great honor, maybe because I know so many people from Puerto Rico that are such great people -- I come from New York.",
+    "seq": 98
+  },
+  {
+    "speaker": "Donald Trump",
+    "type": "paragraph",
+    "text": "But we've gone all out and I consider that, again, a great honor. Thank you very much. Thank you. Thank you very much, everybody. Okay. Thank you all. Let's go make a -- let's go see what we have. Let's go.",
+    "seq": 99
+  }
+],
+    "speakers": []
+}
