@@ -292,6 +292,11 @@ h1.sectionHeader {
 }
 
 
+textarea {
+    overflow: auto;
+    padding: 20px;
+}
+
 /*p.editableSection {
     display: -webkit-flex; 
     -webkit-flex-wrap: wrap;

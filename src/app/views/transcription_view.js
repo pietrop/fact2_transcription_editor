@@ -230,7 +230,11 @@ module.exports = Backbone.View.extend({
       ////TROUBLESHOOTING_PERFORMANCE
       ////saves text locally every 15 seconds. 
       setInterval(function(){
-        self.saveLocally();
+        //only save if there have been changes. 
+        if(self.changesSinceLastSave){
+          self.saveLocally();
+          self.changesSinceLastSave =false; 
+        }
       },15000);
     
       this.initializeTimer();
