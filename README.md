@@ -51,7 +51,7 @@ git clone git@github.com:pietrop/fact2_transcription_editor.git
 get into the folder
 
 ```bash
-cd transcription_editor_factbase
+cd fact2_transcription_editor
 ```
 
 install dependencies 

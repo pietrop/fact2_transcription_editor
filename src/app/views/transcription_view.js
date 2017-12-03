@@ -156,7 +156,9 @@ module.exports = Backbone.View.extend({
 
     "click .fetchFromServerBtn": "fetchFromServer",
 
-    "click .editableSection": "enableEditableSection",
+    // "click .editableSection": "enableEditableSection",
+    // "keydown .editableSection": "enableEditableSection",
+    // "keydown .editableSection": "focusOnEditableSection",
 
     "click .grammarlyCheck": "toggleGrammarly",
 
@@ -882,20 +884,21 @@ pasteHtmlAtCaret: function (html) {
   }, 
 
   finalSave: function(){
-
-    var tmpText = document.getElementById("grammarlyTextAread").value;
-    // var tmpText = this.getPlainText(); 
-    //Needs to find a way in JS to close the window. 
+   
+       
+      var tmpText = document.getElementById("grammarlyTextAread").value;
+      // var tmpText = this.getPlainText(); 
+      //Needs to find a way in JS to close the window. 
     
-    this.model.finalSave(tmpText);
-    //TODO: this should be connected with the model callback response, if scuesfully saved then .. otherwsie..
-    alert("Final Save Complete. You May Close the Editor");
+      this.model.finalSave(tmpText);
+      //TODO: this should be connected with the model callback response, if scuesfully saved then .. otherwsie..
+      alert("Final Save Complete. You May Close the Editor");
 
-  document.getElementById("hiddenGrammarlyButton").click();
+      document.getElementById("hiddenGrammarlyButton").click();
 
-    //change to done page 
-   window.location.hash = 'done';
-
+      //change to done page 
+     window.location.hash = 'done';
+   
     
   },
   fetchFromServer: function() {
@@ -911,7 +914,7 @@ pasteHtmlAtCaret: function (html) {
     // make all other elements non content edtiable and then enable the one clicked on. 
     var ediableSections = document.querySelectorAll(".editableSection");
 
-    console.log(e.target, e.target.parentNode, "e.target", e);
+    // console.log(e.target, e.target.parentNode, "e.target", e);
     ediableSections.forEach((s)=>{
       if(s != e.target){
         s.contentEditable = false;
@@ -927,18 +930,28 @@ pasteHtmlAtCaret: function (html) {
 
   toggleGrammarly: function(){
 
-    document.getElementById("hiddenGrammarlyButton").click();
+    var response = confirm("Grammarly check is the final stage, once you click ok, you cannot rever back to the editor, but only submit a final save, are you ready to proceed?");
 
-
-    // document.querySelector(".textBox").dataset.gramm_editor = true;
-
-
-
-    document.getElementById("grammarlyTextAread").value = document.querySelector(".textBox").innerText;
-
-    // this.model.set({grammarly: true});
-    // location.reload();
+    if(response == true){
+      document.getElementById("hiddenGrammarlyButton").click();
+      document.getElementById("grammarlyTextAread").value = document.querySelector(".textBox").innerText;
+    }else{
+      alert("Relax, nothing happened");
+    }
   }, 
+
+  focusOnEditableSection: function(e){
+    // console.log("enableEditableSection",e,"e.target",e.target, e.which);
+
+    // var el    = e.target;//document.activeElement; //document.querySelector(document.activeElement);
+    // var range = document.createRange();
+    // var sel   = window.getSelection();
+    // range.setStart(el.childNodes[0], 0);
+    // range.collapse(true);
+    // sel.removeAllRanges();
+    // sel.addRange(range);
+ 
+  },
 
   /**
   * @function render

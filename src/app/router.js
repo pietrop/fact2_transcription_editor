@@ -84,7 +84,7 @@ module.exports = Backbone.Router.extend({
       }
 
 
-      console.log(" params.editor_mode", params.editor_mode, typeof  params.editor_mode);
+      // console.log(" params.editor_mode", params.editor_mode, typeof  params.editor_mode);
       
       var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode , grammarly: params.grammarly});
       // tmpTranscription.set({ meta: { user: params.user}});
@@ -96,6 +96,7 @@ module.exports = Backbone.Router.extend({
       tmpTranscription.fetch({
               reset: true,
               success: function (model, response, options) {
+                 window.tmpTranscriptionFromServer = model;
                   // you can pass additional options to the event you trigger here as well
                   // self.trigger('successOnFetch');
                   // console.log(JSON.stringify(model,null,2));
@@ -105,9 +106,10 @@ module.exports = Backbone.Router.extend({
                   });
       
                   displayMain(tmpTranscriptionView);
-                  console.log(model,response, options);
+                  console.log("model",model,"response",response,"options", options);
               },
               error: function (model, response, options) {
+                window.tmpTranscriptionFromServerError = model;
                 //TODO : some sort of error handling if server response is down 
                   // you can pass additional options to the event you trigger here as well
                   // self.trigger('errorOnFetch');

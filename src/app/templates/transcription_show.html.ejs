@@ -97,12 +97,12 @@
 
                     <li class="navbar-form navbar-right " role="search">
 
-                    <a class="btn btn-primary btn-xs grammarlyCheck">
+                    <a class="btn btn-warning btn-xs grammarlyCheck">
                        <span class="glyphicon" aria-hidden="true"></span>
                            Grammarly Check</a>
 
 
-                        <button type="button" class="btn btn-primary btn-xs" id="hiddenGrammarlyButton" data-toggle="modal" data-target="#grammarlyModal"  style="visibility: hidden;" >Grammarly Hidden </button>
+                        <button type="button" class="btn btn-warning btn-xs" id="hiddenGrammarlyButton" data-toggle="modal" data-target="#grammarlyModal"  style="visibility: hidden;" >Grammarly Hidden </button>
                     </li>
 
             <%} %>
@@ -118,7 +118,7 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="grammarlyModal" role="dialog">
+  <div class="modal fade" id="grammarlyModal" role="dialog"  data-backdrop="static" data-keyboard="false">
     <div class="modal-dialog">
     
       <!-- Modal content-->
@@ -302,7 +302,22 @@
     <div class="col-xs-12 col-sm-6  col-md-6  col-lg-6">
     <!-- Text editor component  -->
     <!-- interpolating speakers at the beginning of paragraphs  -->
-    <div class="form-control textBox mousetrap"  data-gramm_editor="false"><% paragraphs.forEach(function(p){ %><% if(p.type =="subheading"){%><!-- p --><div tabindex="0" class="editableSection" contenteditable='false'><h1 class="sectionHeader">{ <%= p.text %> }</h1></div><!--end p--><% }else if(p.type == "paragraph"){ %><!-- p --><p tabindex="0" class="editableSection" contenteditable='false' ><span class="speakerLabel">~<%=p.speaker %>~</span></p><!-- end p --><% if( p.words && p.words.length !== 0){ %><!--p  --><p tabindex="0" class="editableSection" contenteditable='false'  data-gramm_editor="false"><%p.words.forEach(function(w){%><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>"<% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start!==null){%><%if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2")%><%}else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%= w.word.trim()%> </span><%})%></p><!-- end --><% }else{ %><!--  --><p tabindex="0" class="editableSection wordnoTimeCode"  contenteditable='false' data-gramm_editor="false" ><%= p.text %></p><%}%><!-- end p --><% } %><%})%></div></div>
+    <div class="form-control textBox mousetrap"  contenteditable='true' data-gramm_editor="false"><% paragraphs.forEach(function(p){ %><% if(p.type =="subheading"){%>
+      <!-- p -->
+        <h1 class="sectionHeader">{ <%= p.text %> }</h1>
+        <!--end p-->
+        <% }else if(p.type == "paragraph"){ %>
+        <!-- span -->
+        <span class="speakerLabel">~<%=p.speaker %>~</span><!-- end span -->
+        <% if( p.words && p.words.length !== 0){ %>
+        <!--p  -->
+        <p ><%p.words.forEach(function(w){%><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>"<% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start!==null){%><%if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2")%><%}else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%= w.word.trim()%> </span><%})%></p>
+        <!-- end -->
+        <% }else{ %>
+        <!--  -->
+        <p class="wordnoTimeCode"  ><%= p.text %></p><%}%>
+        <!-- end p -->
+        <% } %><%})%></div></div>
     <!-- Col 3 -->
     <div class="col-xs-12 col-sm-3  col-md-3  col-lg-3 ">
       <div class="row">
@@ -447,7 +462,7 @@
             <hr>
             <div class="row">
              <div class="col-xs-3 col-sm-4  col-md-4  col-lg-3">
-              <input type="text" class="form-control" id="inputTimeOnWordClickPlay" placeholder="seconds" value="3">
+              <input type="text" class="form-control" id="inputTimeOnWordClickPlay" placeholder="seconds" value="0">
             </div>
             <div class="col-xs-9 col-sm-7  col-md-8  col-lg-9">
              <!-- <br> -->
