@@ -1,4 +1,4 @@
-# Fact2 Transcriptions Text Editor
+# Fact2 Transcriptions Text Editor - 
 
 Largely inspired by [oTranscribe](http://otranscribe.com/) a client side transcriptions text editor to proofread and correct the text before re-alignement back on the server.
 
