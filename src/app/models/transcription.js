@@ -96,7 +96,7 @@ module.exports = Backbone.Model.extend({
 		 //converts plain text, with speakers contained as `~` on new lines.
 		 //ad saves them in the `paragraphs` attributes
 		 updateParagraphs: function(text){
-		 	console.info("triggered intermediate save");
+		 	console.info("triggered intermediate save - server");
 	 		var tmpText = parseEditedText(text);
 
 		 	this.set({paragraphs: tmpText});
@@ -120,11 +120,13 @@ module.exports = Backbone.Model.extend({
 
 	 		this.save({
 			    success: function (model, response) {
+			       	alert("successfully updated paragraphs!")
 			        console.log("in transcription model intermediate save - success", model, response);
 			        // alert("Transcription model intermediate save - success");
 			        console.info(JSON.stringify(model, 2, null));
 			    },
 			    error: function (model, response) {
+			       	alert("there was an issue updating paragraphs!")
 			        console.error("in transcription model - error",model, response);
 			        // alert("Transcription model intermediate save - Error, contact system administrator");
 			        console.error(JSON.stringify(model, 2, null));

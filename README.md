@@ -109,6 +109,13 @@ git push githubfactbase master
 
 https://help.github.com/articles/adding-a-remote/ -->
 
+## run local dev server
+
+```
+npm run mock_api
+```
+
+Needs tweaking to add medias to it. 
 
 ## Contributors
 

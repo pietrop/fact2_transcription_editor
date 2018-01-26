@@ -39,7 +39,8 @@ module.exports = Backbone.View.extend({
     });
 
 
-    this.changesSinceLastSave = false; 
+    window.changesSinceLastSaveLocal = false; 
+    window.changesSinceLastSaveServer = false; 
 
     this.typingTimer;
     this.playPauseControl =false;
@@ -61,19 +62,20 @@ module.exports = Backbone.View.extend({
 	}
 	  
 ////TROUBLESHOOTING_PERFORMANCE
-	setInterval(serverSideSaveTimer, saveInterval(saveIntervalMinutes));
-
+	   setInterval(serverSideSaveTimer, saveInterval(saveIntervalMinutes));
+    
+    
     function serverSideSaveTimer() {
+      console.log("triggered server side save on timer - before if - changesSinceLastSaveServer", window.changesSinceLastSaveServer);
       // TODO: if there has been changes since last save. 
-      if(this.changesSinceLastSave){
+      if(window.changesSinceLastSaveServer){
+        console.log("triggered server side save on timer - after if ");
         var tmpText = self.getPlainText(); 
         self.model.updateParagraphs(tmpText);
-        this.changesSinceLastSave = false; 
+        window.changesSinceLastSaveServer = false; 
       }
       
     }
-
-
 
     // window.setInterval(function(t){
     //   if (self.mediaEl.readyState > 0) {
@@ -150,7 +152,7 @@ module.exports = Backbone.View.extend({
 
     "click #showHideConfidenceScoresCheckBox": "showHideConfidenceScores",
 
-    "click .intermediateSaveBtn": "intermediateSaveLocally",
+    "click .intermediateSaveBtn": "intermediateSave",
 
     "click .finalSaveBtn": "finalSave",
 
@@ -211,7 +213,7 @@ module.exports = Backbone.View.extend({
     'ctrl+6'     : 'addSpeaker',
     'ctrl+7'     : 'addDescription',
     'ctrl+8'     : 'addSectionHeader',
-    'ctrl+s'     : 'intermediateSaveLocally'
+    'ctrl+s'     : 'intermediateSave'
   },
 
     setupMedia: function(){
@@ -233,9 +235,9 @@ module.exports = Backbone.View.extend({
       ////saves text locally every 15 seconds. 
       setInterval(function(){
         //only save if there have been changes. 
-        if(self.changesSinceLastSave){
+        if(window.changesSinceLastSaveLocal){
           self.saveLocally();
-          self.changesSinceLastSave =false; 
+          window.changesSinceLastSaveLocal =false; 
         }
       },15000);
     
@@ -633,9 +635,11 @@ module.exports = Backbone.View.extend({
 
     typing: function(e){ 
       //used with the server timer. if there are no changes does not save. 
-      this.changesSinceLastSave = true; 
+      window.changesSinceLastSaveServer = true; 
+      window.changesSinceLastSaveLocal = true; 
+      console.log("changesSinceLastSaveServer", window.changesSinceLastSaveServer);
       //TODO: check for speaker labels 
-      var self = this;
+      // var self = this;
       var typingDelaySeconds= parseInt($('#inputTypingDelaySeconds').val());
       //cannot allow zero value or negative numbers, coz it does not do anything, so this is a catch for that 
       if(typingDelaySeconds <= 0){
@@ -645,9 +649,9 @@ module.exports = Backbone.View.extend({
       if(this.playPauseControl){
       //if it is not the escape key 
         if(!(e.keyCode === 27) ){
-          this.mediaEl.pause();
+          self.mediaEl.pause();
           clearTimeout(this.typingTimer);
-            this.typingTimer = setTimeout(function(){
+            self.typingTimer = setTimeout(function(){
             self.mediaEl.play();
           },doneTypingInterval);
         }
@@ -857,6 +861,11 @@ pasteHtmlAtCaret: function (html) {
      this.model.saveLocally(tmpData);
   },
 
+   saveToServer: function(data){
+     var tmpData = document.querySelector('.textBox').innerHTML;
+     this.model.updateParagraphs(tmpData);
+  },
+
   //used when coming back to transcription, we assume most accurate version is the one we have locally. 
   ifExistLocalVersionLoadThat: function(){
     if(this.model.isInLocalStorage(this.model.id)){
@@ -874,8 +883,18 @@ pasteHtmlAtCaret: function (html) {
     this.setupHyperTranscriptColorProgressIndication();
   },
 
-  intermediateSaveLocally: function(){
-    alert("Saved to Server. Thank you!");
+  //save to server
+  intermediateSave: function(){
+    alert("About to save to Server");
+
+    this.saveToServer();
+    // this.saveLocally();
+  },
+
+   intermediateSaveLocally: function(){
+    // alert("About to save to Server");
+    console.log("about to save to server");
+    // this.saveToServer();
     this.saveLocally();
   },
 
