@@ -862,7 +862,7 @@ pasteHtmlAtCaret: function (html) {
   },
 
    saveToServer: function(data){
-     var tmpData = document.querySelector('.textBox').innerHTML;
+     var tmpData = document.querySelector('.textBox').innerText;
      this.model.updateParagraphs(tmpData);
   },
 
