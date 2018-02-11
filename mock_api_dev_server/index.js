@@ -39,7 +39,8 @@ app.put('/api/proofreader.php', function(req, res) {
 });
 
 //load sample data
-var sampleJsonTranscription = require('./sample3.json');
+//var sampleJsonTranscription = require('./sample3.json');
+var sampleJsonTranscription = require("./BAH-2018-02-05.json");
 
 //enable cross origin request  - https://enable-cors.org/server_expressjs.html
 // app.use(function(req, res, next) {

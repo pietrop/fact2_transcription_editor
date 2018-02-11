@@ -70,7 +70,6 @@ module.exports = Backbone.Router.extend({
         params.editor_mode == true;
       }
 
-
        if(params.grammarly == "true" ){
         //if true then content editable is set to false.
         params.grammarly == true;
@@ -83,18 +82,17 @@ module.exports = Backbone.Router.extend({
         params.grammarly == false;
       }
 
-
       // console.log(" params.editor_mode", params.editor_mode, typeof  params.editor_mode);
       
       var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode , grammarly: params.grammarly});
       // tmpTranscription.set({ meta: { user: params.user}});
       window.tmpTranscription = tmpTranscription;
-      console.info("version in router",tmpTranscription.attributes.meta.version);
+      console.info("version in router", tmpTranscription.attributes.meta.version);
       //TODO: add loading message / view 
       // displayMain('Loading transcription ...');
     
       tmpTranscription.fetch({
-              reset: true,
+              // reset: true,
               success: function (model, response, options) {
                  window.tmpTranscriptionFromServer = model;
                   // you can pass additional options to the event you trigger here as well
@@ -106,7 +104,7 @@ module.exports = Backbone.Router.extend({
                   });
       
                   displayMain(tmpTranscriptionView);
-                  console.log("model",model,"response",response,"options", options);
+                  console.log("model", model,"response", response, "options", options);
               },
               error: function (model, response, options) {
                 window.tmpTranscriptionFromServerError = model;
