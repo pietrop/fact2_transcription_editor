@@ -320,9 +320,7 @@
         <% }else{ %>
           <!-- fallback in case type of section, eg paragraph or subheading is not defined. -->
 
-           <p ><%p.words.forEach(function(w){%><span data-seq="<%= w.seq %>" data-start-time="<%= w.sub_start %>" data-end-time="<%= w.sub_end %>" data-confidence="<%= w.confidence %>"<% var classNames = ["afterPlayHead","words"] %> <% if(w.sub_start!==null){%><%if( w.confidence < 0.60 && w.confidence > 0 ){ %> <% classNames.push("confidenceScore2")%><%}else if(w.confidence >= 0.60 && w.confidence < 0.80 ){ %> <% classNames.push("confidenceScore3") %> <% }else if(w.confidence >= 0.80 && w.confidence <= 0.95){ %> <% classNames.push("confidenceScore4") %> <% }%> <% }else{ %> <% classNames.push("wordnoTimeCode") %> <% } %> class="<%= classNames.join(" ") %>"><%= w.word.trim()%> </span><%})%></p>
-
-
+          <p class="wordnoTimeCode"  ><%= p.text %></p>
           <%}%>
 
 
