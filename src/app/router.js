@@ -57,12 +57,12 @@ module.exports = Backbone.Router.extend({
        alert("not a valid request, missing user parameter");
       
     }else{
-  
       if(params.editor_mode == "true" ){
         //if true then content editable is set to false.
         params.editor_mode == true;
       }else if(params.editor_mode == "false"){
         params.editor_mode == false;
+        console.log("False editor_mode")
       //if param not passed or invalid then go into editor mode. 
       }else if (params.editor_mode == undefined){
         params.editor_mode == true;

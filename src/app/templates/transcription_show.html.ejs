@@ -85,7 +85,7 @@
 
           </ul>
 
-          <% if(!editor_mode){%>
+          <% if(editor_mode == "false"){%>
 
 
                   <!--  <li class="navbar-form navbar-right " role="search">
@@ -262,7 +262,7 @@
                 <td></td>
                 </tr>
 
-<% if(!editor_mode){%>
+<% if(editor_mode == "false"){%>
 
                 <tr>
                 <td scope="row">Add Speaker</th>
@@ -319,6 +319,10 @@
         <!-- end p -->
         <% }else{ %>
           <!-- fallback in case type of section, eg paragraph or subheading is not defined. -->
+          
+           <% if(p.speaker){ %>
+            <span class="speakerLabel">~<%=p.speaker %>~</span>
+            <% }%>
 
           <p class="wordnoTimeCode"  ><%= p.text %></p>
           <%}%>
@@ -337,7 +341,7 @@
             </div>
          </div>
 
-         <% if(editor_mode){%>
+         <% if(editor_mode == "true"){%>
 
         <div class="row">
             <div class="hidden-xs col-sm-4  col-md-4  col-lg-3">
@@ -394,7 +398,7 @@
          <hr>
 
 
-<% if(!editor_mode){%>
+<% if(editor_mode == "false"){%>
 
          <div class="row">
           <div class="col-xs-3 col-sm-4  col-md-4  col-lg-3">
@@ -481,7 +485,7 @@
          <hr>
 
 
-<% if(!editor_mode ){%> 
+<% if(editor_mode == "false"){%> 
      <div class="row">
       <div class="col-xs-12 col-sm-12  col-md-12  col-lg-12">
         <span class="btn btn-primary btn-xs intermediateSaveBtn">Intermediate save</span>
