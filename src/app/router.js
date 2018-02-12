@@ -53,7 +53,7 @@ module.exports = Backbone.Router.extend({
     console.log('params',params);
     if( params.id == undefined){
       alert("not a valid request, missing id paramter");
-    }else if(params.user == undefined){
+    }else if(params.user_id == undefined){
        alert("not a valid request, missing user parameter");
       
     }else{
@@ -84,7 +84,7 @@ module.exports = Backbone.Router.extend({
 
       // console.log(" params.editor_mode", params.editor_mode, typeof  params.editor_mode);
       
-      var tmpTranscription = new Transcription({ id: params.id,  user: params.user, editor_mode:  params.editor_mode , grammarly: params.grammarly});
+      var tmpTranscription = new Transcription({ id: params.id,  user_id: params.user_id, editor_mode:  params.editor_mode , grammarly: params.grammarly});
       // tmpTranscription.set({ meta: { user: params.user}});
       window.tmpTranscription = tmpTranscription;
       console.info("version in router", tmpTranscription.attributes.meta.version);
