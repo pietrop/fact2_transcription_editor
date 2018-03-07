@@ -1,6 +1,6 @@
 {
   "name": "transcription_editor_factbase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Largely inspired by [oTranscribe](http://otranscribe.com/) a client side transcriptions text editor for to proofread and correct the text before re-alignement back on the server.",
   "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
   "main": "index.js",
