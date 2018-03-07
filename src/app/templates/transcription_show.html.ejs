@@ -183,11 +183,15 @@
         </div>
         <% }else if(meta.media_type == 'audio'){%>
         <div class="">
-          <audio id="mediaPreview" tabindex="0">
-            <source src="<%= meta.media_file %>" type="audio/mp3">
+            <audio id="mediaPreview" tabindex="0">
+               <source src="<%= meta.media_file %>" type="audio/mp3">
             </audio>
 
           </div>
+           <% }else if(meta.media_type == 'm3u8'){%>
+              <video id="mediaPreview" tabindex="0">
+                  <source src="<%= meta.media_file %>" type="application/x-mpegURL">
+              </video>
           <% }%>
 
           <br>
